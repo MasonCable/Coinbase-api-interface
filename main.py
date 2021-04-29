@@ -9,7 +9,10 @@ auth = CBAuth(KEY, SECRET, PASSPHRASE)
 accountData = Account()
 marketData = MarketData()
 
-print(marketData.product_trades("BTC"))
+for i in accountData.accounts():
+    if float(i['available']) != 0.00000000:
+        print(i)
+        
     
 
 run = False
