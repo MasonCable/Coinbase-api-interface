@@ -22,8 +22,9 @@ def limit_buy(asset, price, executionPrice):
     account = Account()
     response = market.product_from_id(asset)
     confirmTransaction = input('You would like to {0} ${1} worth of {2} when {2} reaches a price of ${3}\n (yes) Or (no)\n'.format(inputBuyOrSell, buyOrSellPrice ,inputAsset, executionPrice))
-    if confirmTransaction:
-        account.orders()
+    if confirmTransaction == 'yes' or confirmTransaction == 'Yes':
+        # account.orders()
+        return 'OK you baller'
     else:
         return "Order Canceled, click up arrow to try again"
 
