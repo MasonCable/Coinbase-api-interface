@@ -6,9 +6,9 @@ from MarketData import MarketData
 from auth_credentials import PASSPHRASE, KEY, SECRET
 # Store user arguments as globals
 parser = argparse.ArgumentParser()
-parser.add_argument("-b", "--buy", help="Buy $ASSET")
+parser.add_argument("-b", "--buy", help="Buy Ex. BTC-USD, ETH-USD")
 parser.add_argument("-p", "--price", help="What Price Would you like to buy/sell this asset at?")
-parser.add_argument("-s", "--sell", help="Sell $ASSET")
+parser.add_argument("-s", "--sell", help="Sell Ex. BTC-USD, ETH-USD")
 parser.add_argument("-ep", "--executionprice", help="What price would you like this order to be executed at?")
 args = parser.parse_args()
 inputAsset = args.buy if args.buy else args.sell
